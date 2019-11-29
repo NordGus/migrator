@@ -12,7 +12,7 @@ func main() {
 	now := time.Now()
 	version := now.Format("20060102150405")
 
-	file, err := os.OpenFile("./config/migrations.go", os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0666)
+	file, err := os.OpenFile("./app/config/migrations.go", os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0666)
 	if err != nil {
 		logger.Println(err)
 		os.Exit(7)
